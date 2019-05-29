@@ -1,0 +1,8 @@
+
+{
+  "packages": {
+    "npm:picturefill": {
+      "js": "dist/picturefill.js"
+    }
+  }
+}
