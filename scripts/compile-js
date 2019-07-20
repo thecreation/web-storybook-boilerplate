@@ -18,11 +18,7 @@ const compile = (src, dest) => {
       input: src,
       external: ['jquery'],
       plugins: [
-        resolve({
-          jsnext: true,
-          main: true,
-          browser: true,
-        }),
+        resolve(),
         commonjs({
           include: ['node_modules/**']
         }),

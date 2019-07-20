@@ -54,13 +54,6 @@ module.exports = {
     fontPath: '../icons/',
   },
 
-  favicon: {
-    path: "assets/favicon/",
-    source: 'src/favicon/favicon.png',
-    build: 'dist/assets/favicon',
-    html: 'src/partials/favicon.hbs',
-  },
-
   vendor: {
     manifest: 'manifest.json',
     dest: 'dist/assets/vendor',
