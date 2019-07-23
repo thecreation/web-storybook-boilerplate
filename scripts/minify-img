@@ -9,7 +9,8 @@ const svgoPlugin = require('imagemin-svgo');
 const config = require('../config');
 const colors = require('colors');
 
-imagemin([config.images.source], config.images.build, {
+imagemin([config.images.source], {
+  destination: config.images.build,
   plugins: [
     mozJpegPlugin({ progressive: true }),
     pngquantPlugin(),
@@ -24,6 +25,6 @@ imagemin([config.images.source], config.images.build, {
   ]
 }).then(files => {
   files.forEach(file => {
-    console.log(colors.green(`${file.path} minified.`));
+    console.log(colors.green(`${file.destinationPath} minified.`));
   });
 });
